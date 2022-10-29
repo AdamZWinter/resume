@@ -2,6 +2,13 @@
 //guestbook.php
 
 require('header.php');
+require('../conf.php');
+require('utilities/Database.php');
+
+$myDB = new Database();
+$db = $myDB->getdb();
+
+
 ?>
 
 
@@ -46,6 +53,26 @@ require('header.php');
   </center>
     
   </form>
+
+
+  <br>
+  <br>
+  <br>
+  <div class="row"><div class="col-2"></div>
+  <div class="col-10">
+  <p>The following guests have been here:</p>
+  <?php
+        $result = $db->query("SELECT * FROM `guestbook` WHERE 1");
+        //echo $result->num_rows;
+        for($i = 0; $i < $result->num_rows; $i++){
+            $result->data_seek($i);
+            $row = $result->fetch_assoc();
+            echo $row["lname"].', '.$row["fname"];
+            echo '<br>';
+        }
+    ?>
+</div></div>
+<br>
 
 <?php
 require('footer.php');
