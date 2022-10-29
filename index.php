@@ -69,7 +69,14 @@ require('header.php');
                       DevOps
                     </h1>
                     <p>
-                      Jenkins, Terraform, Azure & AWS:  Hosting Jenkins server on my own private server rack.  Built complete pipeline for deployment of containerized website utilizing Jenkins and Terraform.  Production server is in Azure, beta server is in AWS.  Migrating monolithic FatBit/YoKart server to container.  Debugging, Editing, and extending PHP code as necessary.  Developing scripts for automation of processes that interact with site. 
+                      <ul>
+                        <li>Jenkins, Terraform, Azure & AWS:  Hosting Jenkins server on my own private server rack.</li>
+                        <li>Built complete pipeline for deployment of containerized website utilizing Jenkins and Terraform.</li>
+                        <li>Production server is in Azure, beta server is in AWS.</li>
+                        <li>Migrating monolithic FatBit/YoKart server to container.</li>
+                        <li>Debugging, Editing, and extending PHP code as necessary.</li>
+                        <li>Developing scripts for automation of processes that interact with site.</li>
+                      </ul>
                     </p>
                   </div>
                 </div>
@@ -339,6 +346,19 @@ require('header.php');
               </div>
 
 
+              <h2>
+                Portfolio:
+              </h2>
+              <!-- Start Projects *********************************************************************************************************************************** -->
+                
+              <p>
+                <a href="portfolio.php">
+                <button class="btn btn-primary w-100" type="button">
+                  Projects
+                </button>
+                </a>
+              </p>
+
 
               <h2>
                 Also:
@@ -404,7 +424,7 @@ require('header.php');
     </div>
     </div>
 
-<?php>
+<?php
 require('footer.php');
 
 
