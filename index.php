@@ -1,6 +1,6 @@
 <?php
 
-//comments
+//index.php for resume
 require('header.php');
 ?>
 
@@ -404,6 +404,13 @@ require('header.php');
 
               </div><!-- Card collapse -->
               </div>
+
+              <!-- Sign Guestbook ******************************************************************************************************** -->
+              <p>
+                <a href="guestbook.php">
+                  Sign my Guestbook
+                </a>
+              </p>
 
 
                 
