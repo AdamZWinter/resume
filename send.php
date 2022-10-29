@@ -83,6 +83,8 @@ $success = mail($to, $subject, $messageEmail, implode("\r\n", $headers));
   if (!$success) {
       $errorMessage = error_get_last()['message'];
       echo 'Error: Failed to send mail -- '.$errorMessage;
+  }else{
+    $errorMessage = $message;
   }
 
 ?>
