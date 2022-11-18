@@ -1,0 +1,27 @@
+<li>Ingests and processes DMARC reports</li>
+<li>Presents DMARC reports in human-readable form</li>
+<li><a href="https://dmarc.topsecondhost.com/">https://dmarc.topsecondhost.com/</a></li>
+
+<li>Provides plugin booking service to Google Calendar</li>
+<li>Manage bookings entire through yoour Google Calendar</li>
+<li>Customers pay for bookings through Paypal</li>
+<li>Google and Paypal API integration</li>
+<li><a href="https://gcbookings.com/">https://gcbookings.com/</a></li>
+
+<li>(Jenkins Azure/AWS Container Terraform)</li>
+<li>Template for creating Jenkins Pipelines for deploying contianers to AWS/Azure using Terraform</li>
+<li><a href="https://github.com/AdamZWinter/apachejact">https://github.com/AdamZWinter/apachejact</a></li>
+
+
+
+<li>Built Dev server in AWS for use by all team members</li>
+<li>Each team member has their own dev environment</li>
+<li>Updates are pushed to GitHub, then pulled to live/production server from GitHub</li>
+<li><a href="https://github.com/AdamZWinter/weddingRentals">https://github.com/AdamZWinter/weddingRentals</a></li>
+<li><a href="http://orange.topsecondhost.com/adam/weddingRentals/admin.php">http://orange.topsecondhost.com/adam/weddingRentals/admin.php</a></li>
+
+
+<li>Originally, this was a set of installation scripts for configuring a CentOS server in AWS as a LAMP stack.</li>
+<li>That old version is still available as the "oldMonolith" branch in the GitHub repo.</li>
+<li>The new version creates a platform-agnostic LAMP stack using Docker-Compose.</li>
+<li><a href="https://github.com/AdamZWinter/TopSecondHost">https://github.com/AdamZWinter/TopSecondHost</a></li>
