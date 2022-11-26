@@ -38,6 +38,10 @@ if($action == "delete"){
 }
 
   $result = $db->query($query);
+  echo '<br>';
+  echo $db->error;
+  echo '<br>';
+  echo '<br>';
   echo 'row affected: '.$result->num_rows;
   echo '<br>';
   var_dump($result);
