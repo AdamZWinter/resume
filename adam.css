@@ -1,6 +1,14 @@
+:root {
+  --myPurple: 8, 0, 24;
+  --purpleButton: 25, 0, 75;
+  --offWhite: 195, 210, 190, 1;
+  --backGrey: 40, 40, 40;
+  --linkBlue: 195, 210, 255, 1;
+}
+
 .myHeader-Title{
   color:black;
-  font-weight: 900;
+  font-weight: 500;
   text-align: left;
   font-size: 75px;  
 }
@@ -8,6 +16,11 @@
 .myLogo {
   height: 200px;
   width: 200px;
+}
+
+#grad1 {
+  /* Standard syntax (must be last) */
+  background-image: radial-gradient(circle at top left, rgba(256,256,256,1), rgba(var(--myPurple), .25));
 }
 
 #orangeyouglad {

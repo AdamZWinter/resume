@@ -11,22 +11,43 @@
   <link href="adam.css" rel="stylesheet">
 
   <style>
-
+    .contactButton{
+      padding: 4px 4px;
+    }
   </style>
 
 <title>Resume for Adam Winter</title>
 </head>
 
-<body>
+<body id="grad1">
   <div class = " container-fluid">
   <div class= "row">
-    <div class="d-sm-none d-md-block col-1">
+    <div class="d-sm-none d-md-block col-2">
               <!--
                 <h1>Left Margin</h1>
               -->
     </div>
-    <div class="col-5 col-sm-12"><h1 class="myHeader-Title">Adam Winter</h1></div>
-    <div class = "col-5 col-sm-12 logo"><img class= "img-logo myLogo float-end" src="img/fromHank.bmp" alt="Bootstrap Music Logo"></div>
+    <div class="col-8 col-sm-12"></br><h1 class="myHeader-Title text-center">Adam Winter</h1></div>
+    <div class = "col-2 col-sm-12 logo">
+            </br>
+            <button onclick="getPhone()" class="btn btn btn-outline-primary btn-sm contactButton" type="button" data-bs-toggle="collapse" data-bs-target="#phone" aria-expanded="false" aria-controls="phone">
+                Show Phone
+            </button>
+            <div class="collapse" id="phone">
+            <div class="card">
+              <span id="myPhone">Phone here</span>
+            </div>
+            </div>
+      
+            <button onclick="getEmail()" class="btn btn btn-outline-primary btn-sm contactButton" type="button" data-bs-toggle="collapse" data-bs-target="#email" aria-expanded="false" aria-controls="email">
+                Show Email
+            </button>
+            <div class="collapse" id="email">
+            <div class="card">
+              <span id="myEmail">Email Here</span>
+            </div>
+            </div>
+    </div>
 
     <div class="d-sm-none d-md-block col-1">
               <!--
@@ -36,10 +57,20 @@
   </div>
   </div>
 
+  <script>
+    function getPhone(){
+      document.getElementById('myPhone').innerHTML = atob("MjUzLTcwOS01MTAz");   
+    }
+
+    function getEmail(){
+      document.getElementById('myEmail').innerHTML = atob("Z3Jhdml0eS5mcmVlemVAZ21haWwuY29t");
+    }
+  </script>
+
     <!--
     ********************************* NAV BAR ****************************************************************************************************
   -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container-fluid">
             <!--a class="navbar-brand" href="#">Navbar</a-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,17 +79,17 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="./">Adam Winter</a>
+                  <a class="nav-link active" aria-current="page" href="./">Home</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     More
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="resume.php">Resume</a></li>
                     <li><a class="dropdown-item" href="portfolio.php">Portfolio</a></li>
-                    <li><a class="dropdown-item" href="check-inForm.php">.....</a></li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="more.php">.....</a></li>
+                    <li><a class="dropdown-item" href="guestbook.php">Sign the Guestbook</a></li>
                   </ul>
                 </li>
                 <!--li class="nav-item">

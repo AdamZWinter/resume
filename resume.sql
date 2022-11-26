@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mariadb
--- Generation Time: Nov 18, 2022 at 05:21 PM
+-- Generation Time: Nov 26, 2022 at 05:39 AM
 -- Server version: 10.9.3-MariaDB-1:10.9.3+maria~ubu2204
 -- PHP Version: 7.4.20
 
@@ -28,18 +28,14 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `guestbook` (
-  `fname` varchar(64) NOT NULL,
-  `lname` varchar(64) NOT NULL,
+  `id` int(11) NOT NULL,
+  `fname` varchar(32) NOT NULL,
+  `lname` varchar(32) NOT NULL,
   `message` text NOT NULL,
-  `link` varchar(256) NOT NULL
+  `link` varchar(512) NOT NULL,
+  `approved` tinyint(1) NOT NULL,
+  `hash` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `guestbook`
---
-
-INSERT INTO `guestbook` (`fname`, `lname`, `message`, `link`) VALUES
-('Adam', 'Winter', 'This is my message to you hoo hoo', 'http://orange.topsecondhost.com/adam/resume/guestbook.php');
 
 -- --------------------------------------------------------
 
@@ -69,10 +65,26 @@ INSERT INTO `portfolio` (`title`, `image`, `content`) VALUES
 --
 
 --
+-- Indexes for table `guestbook`
+--
+ALTER TABLE `guestbook`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `portfolio`
 --
 ALTER TABLE `portfolio`
   ADD PRIMARY KEY (`title`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `guestbook`
+--
+ALTER TABLE `guestbook`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

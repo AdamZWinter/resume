@@ -4,6 +4,7 @@
 require('header.php');
 require('../conf.php');
 require('utilities/Database.php');
+require('utilities/PWhasher.php');
 
 $myDB = new Database();
 $db = $myDB->getdb();
@@ -39,7 +40,10 @@ if( !isset($_POST['fname']) ){
     $link = $_POST['link'];
   }
 
-  $query = "INSERT INTO `guestbook`(`fname`, `lname`, `message`, `link`) VALUES ('".$fname."','".$lname."','".$message."','".$link."')";
+  $stringToHash = $fname.$lname.$message.$link;
+  $hash = PWhasher::get64char($stringToHash);
+
+  $query = "INSERT INTO `guestbook`(`fname`, `lname`, `message`, `link`, `approved`, `hash`) VALUES ('".$fname."','".$lname."','".$message."','".$link."',"FALSE",'".$hash."')";
   $db->query($query);
 
 
@@ -57,10 +61,17 @@ $messageEmail = '
 </head>
 <body>
   <p>
+  Click the following link to approve the post: <a href="https://adamwinter.greenriverdev.com/resume/guestbookApproval.php?hash='.$hash.'&action=approve">Approve</a>
+  </p>
+  <p>
     <br>First Name:  '.$fname.'
     <br>Last Name:  '.$lname.'
     <br>Message:  '.$message.'
     <br>Link:  '.$link.'
+  </p>
+  <br>
+  <p>
+  Click the following link to DELETE this from the database: <a href="https://adamwinter.greenriverdev.com/resume/guestbookApproval.php?hash='.$hash.'&action=delete">Delete</a>
   </p>
 </body>
 </html>
