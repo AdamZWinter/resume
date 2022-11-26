@@ -29,13 +29,18 @@ if( !isset($_GET['action']) ){
 
 if($action == "approve"){
     $query = "UPDATE `guestbook` SET `approved`= 1 WHERE `hash` =".$hash;
+    echo 'action is approve';
 }
 
 if($action == "delete"){
     $query = "DELETE FROM `guestbook` WHERE `hash` =".$hash;
+    echo 'action is delete';
 }
 
-  $db->query($query);
+  $result = $db->query($query);
+  echo 'row affected: '.$result->num_rows;
+  echo '<br>';
+  var_dump($result);
 
 ?>
 
