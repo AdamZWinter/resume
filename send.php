@@ -43,7 +43,7 @@ if( !isset($_POST['fname']) ){
   $stringToHash = $fname.$lname.$message.$link;
   $hash = PWhasher::get64char($stringToHash);
 
-  $query = "INSERT INTO `guestbook`(`fname`, `lname`, `message`, `link`, `approved`, `hash`) VALUES ('".$fname."','".$lname."','".$message."','".$link."',"FALSE",'".$hash."')";
+  $query = "INSERT INTO `guestbook`(`fname`, `lname`, `message`, `link`, `approved`, `hash`) VALUES ('".$fname."','".$lname."','".$message."','".$link."',0,'".$hash."')";
   $db->query($query);
 
 
