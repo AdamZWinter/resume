@@ -1,6 +1,32 @@
 <?php
 //portfolio.php
 
+if( !isset($_POST['fname']) ){
+  echo $redirect;
+}else{
+  $fname = $_POST['fname'];
+  setcookie("fname", $fname);
+}
+
+if( !isset($_POST['lname']) ){
+  echo $redirect;
+}else{
+  $lname = $_POST['lname'];
+  setcookie("lname", $lname);
+}
+
+if( !isset($_POST['message']) ){
+  //nothing
+}else{
+  $message = $_POST['message'];
+}
+
+if( !isset($_POST['link']) ){
+  //nothing
+}else{
+  $link = $_POST['link'];
+}
+
 require('header.php');
 require('../conf.php');
 require('utilities/Database.php');
@@ -15,30 +41,7 @@ window.location.href="./";
 
 $message = '';  //initialized
 $link = '';  //initialized
-  
-if( !isset($_POST['fname']) ){
-    echo $redirect;
-  }else{
-    $fname = $_POST['fname'];
-  }
- 
-  if( !isset($_POST['lname']) ){
-    echo $redirect;
-  }else{
-    $lname = $_POST['lname'];
-  }
 
-  if( !isset($_POST['message']) ){
-    //nothing
-  }else{
-    $message = $_POST['message'];
-  }
-
-  if( !isset($_POST['link']) ){
-    //nothing
-  }else{
-    $link = $_POST['link'];
-  }
 
   $stringToHash = $fname.$lname.$message.$link;
   $hash = PWhasher::get64char($stringToHash);

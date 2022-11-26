@@ -26,9 +26,9 @@ require('header.php');
           A few years ago, I developed an entire booking system that hundreds of Seattle's local musicians have used to book and pay for my services.  
           I use an AWS server that I built for this, but I also have a rack of servers at my facilities, which hosts many other services.
           Though I'm a Cisco Certified Network Associate, and I studied Physics at Seattle Pacific University, I have a particular interest in software development and devops.
-          So, I've recently gone back to school, and I'm currently in the Bachelor Software Development program at Green River College, as a junior.
+          So, I've recently gone back to school, and I'm currently in the Bachelor Software Development program at Green River College, as a junior (again).
           So far, this experience is filling in many gaps in my knowledge, but also solidifying many things that I've learned on my own along the way.  
-          I look forward to the opportunities that all of these experiences will provide.  Please, have a look around, and fee free to reach out.
+          I look forward to the opportunities that all of these experiences will provide.  Please, have a look around, and feel free to reach out.
         </p>
         <br>
         <p>

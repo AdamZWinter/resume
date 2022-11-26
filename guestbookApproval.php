@@ -42,7 +42,7 @@ if($action == "delete"){
   echo $db->error;
   echo '<br>';
   echo '<br>';
-  echo 'row affected: '.$result->num_rows;
+  echo 'row affected: ';
   echo '<br>';
   var_dump($result);
 

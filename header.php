@@ -30,7 +30,7 @@
     <div class="col-8 col-sm-12"></br><h1 class="myHeader-Title text-center">Adam Winter</h1></div>
     <div class = "col-2 col-sm-12 logo">
             </br>
-            <button onclick="getPhone()" class="btn btn btn-outline-primary btn-sm contactButton" type="button" data-bs-toggle="collapse" data-bs-target="#phone" aria-expanded="false" aria-controls="phone">
+            <button onclick="getPhone()" class="btn btn btn-outline-secondary btn-sm contactButton" type="button" data-bs-toggle="collapse" data-bs-target="#phone" aria-expanded="false" aria-controls="phone">
                 Show Phone
             </button>
             <div class="collapse" id="phone">
@@ -39,7 +39,7 @@
             </div>
             </div>
       
-            <button onclick="getEmail()" class="btn btn btn-outline-primary btn-sm contactButton" type="button" data-bs-toggle="collapse" data-bs-target="#email" aria-expanded="false" aria-controls="email">
+            <button onclick="getEmail()" class="btn btn btn-outline-secondary btn-sm contactButton" type="button" data-bs-toggle="collapse" data-bs-target="#email" aria-expanded="false" aria-controls="email">
                 Show Email
             </button>
             <div class="collapse" id="email">
@@ -96,6 +96,13 @@
                   <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </li-->
               </ul>
+              <span class="text-end">
+                <?php 
+                  if(isset($_COOKIE["fname"])){
+                    echo'Hello, '.$_COOKIE["fname"].'!';
+                  }
+                ?>
+              </span>
             </div>
           </div>
         </nav>
