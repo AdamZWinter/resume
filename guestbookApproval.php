@@ -28,12 +28,12 @@ if( !isset($_GET['action']) ){
 }
 
 if($action == "approve"){
-    $query = "UPDATE `guestbook` SET `approved`= 1 WHERE guestbook.hash =".$hash;
+    $query = "UPDATE `guestbook` SET `approved`= 1 WHERE `hash` ='".$hash."'";
     echo 'action is approve';
 }
 
 if($action == "delete"){
-    $query = "DELETE FROM `guestbook` WHERE guestbook.hash =".$hash;
+    $query = "DELETE FROM `guestbook` WHERE `hash` ='".$hash."'";
     echo 'action is delete';
 }
 
