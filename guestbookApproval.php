@@ -15,16 +15,16 @@ window.location.href="./";
 $message = '';  //initialized
 $link = '';  //initialized
   
-if( !isset($_POST['hash']) ){
+if( !isset($_GET['hash']) ){
     echo $redirect;
 }else{
-    $hash = $_POST['hash'];
+    $hash = $_GET['hash'];
 }
 
-if( !isset($_POST['action']) ){
+if( !isset($_GET['action']) ){
     echo $redirect;
 }else{
-    $action = $_POST['action'];
+    $action = $_GET['action'];
 }
 
 if($action == "approve"){
